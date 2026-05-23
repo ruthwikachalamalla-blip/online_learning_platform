@@ -1,0 +1,42 @@
+###Create a Course
+POST http://localhost:5000/instructor-api/course
+Content-Type: application/json
+
+{
+    "instructor": "6a1137c18c625762b63a88f8",
+    "title":"Java Programming",
+    "category":"OOPs",
+    "content":"Hello World! Welcome to the World of Java"
+}
+
+###For Course Delete/Deactivation
+PATCH http://localhost:5000/instructor-api/courses/deactivate
+Content-Type: application/json
+
+{
+    "courseId":"6a11384f8c625762b63a88f9",
+    "isCourseActive":false
+}
+
+###For Reading Own Courses
+GET http://localhost:5000/instructor-api/courses
+
+###For Course Activation
+PATCH http://localhost:5000/instructor-api/courses/activate
+Content-Type: application/json
+
+{
+    "courseId":"6a11384f8c625762b63a88f9",
+    "isCourseActive":true
+}
+
+###Course Update
+PUT http://localhost:5000/instructor-api/course
+Content-Type: application/json
+
+{
+    "courseId": "6a11384f8c625762b63a88f9",
+    "title":"Java Programming",
+    "category":"OOPs",
+    "content":"Hello World! Welcome to the World of Java. Java is a Object Oriented Language"
+}

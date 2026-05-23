@@ -1,0 +1,42 @@
+#Route for Register(Student and Instructor)
+POST http://localhost:5000/auth/register
+Content-Type: application/json
+
+{
+    "firstName": "ram",
+    "lastName": "mote",
+    "email": "ram@mail.com",
+    "password": "ram123",
+    "role": "STUDENT",
+    "profileImageUrl": ""
+}
+
+###Route for Login(Student, Instructor)
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{
+    "email": "ram@mail.com",
+    "password": "ram123"
+}
+
+###Route for Logout(Student, Instructor and Admin)
+GET http://localhost:5000/auth/logout
+
+###Route for changing Password
+PUT http://localhost:5000/auth/password
+Content-Type: application/json
+
+{
+    "currentPassword":"ruthwika",
+    "newPassword":"ruthwika123"
+}
+
+###Route for forgot password
+PUT http://localhost:5000/auth/forgot-password
+Content-Type: application/json
+
+{
+    "email":"admin@gmail.com",
+    "newPassword":"admin123"
+}
