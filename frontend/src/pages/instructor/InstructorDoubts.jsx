@@ -26,7 +26,7 @@ export default function InstructorDoubts() {
     const loadDoubts = async () => {
       try {
         const res = await axios.get(
-  "http://localhost:5000/instructor-api/doubts",
+  "https://online-learning-platform-lnej.onrender.com",
   {
     withCredentials: true,
   }
@@ -63,7 +63,7 @@ const data = res.data;
 
     try {
       const res = await axios.patch(
-  `http://localhost:5000/instructor-api/doubts/${doubtId}/reply`,
+  `https://online-learning-platform-lnej.onrender.com`,
   { reply },
   {
     headers: { "Content-Type": "application/json" },
