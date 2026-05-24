@@ -97,7 +97,7 @@ export function AuthProvider({ children }) {
   const logout = async () => {
     const currentUser = user;
     try {
-      await fetch("/auth/logout", {
+      await fetch("https://online-learning-platform-lnej.onrender.com/auth/logout", {
         credentials: "include",
       });
     } finally {
