@@ -24,7 +24,7 @@ export default function Certificate() {
   useEffect(() => {
     const fetchCertificate = async () => {
       try {
-        const res = await axios.get("https://online-learning-platform-lnej.onrender.com", {
+        const res = await axios.get("http://localhost:5000/student-api/course", {
   withCredentials: true,
 });
 

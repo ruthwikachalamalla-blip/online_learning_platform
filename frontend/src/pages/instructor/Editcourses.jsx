@@ -40,7 +40,7 @@ export default function EditCourse() {
     const fetchCourse = async () => {
       try {
         const res = await axios.get(
-  "https://online-learning-platform-lnej.onrender.com",
+  "http://localhost:5000/instructor-api/courses",
   {
     withCredentials: true,
   }
@@ -83,7 +83,7 @@ const data = res.data;
       payload.append("file", file);
 
       const res = await axios.post(
-  "https://online-learning-platform-lnej.onrender.com",
+  "http://localhost:5000/instructor-api/media",
   payload,
   {
     withCredentials: true,
@@ -109,7 +109,7 @@ setForm((prev) => ({ ...prev, demoVideo: data.payload.url }));
     setSuccess("");
     try {
       const res = await axios.put(
-  "https://online-learning-platform-lnej.onrender.com",
+  "http://localhost:5000/instructor-api/course",
   {
     courseId: id,
     title: form.title,
@@ -140,7 +140,7 @@ const data = res.data;
 
     try {
       const res = await axios.patch(
-  `https://online-learning-platform-lnej.onrender.com`,
+  `http://localhost:5000/instructor-api/courses/${endpoint}`,
   { courseId: id, isCourseActive: newState },
   {
     headers: { "Content-Type": "application/json" },

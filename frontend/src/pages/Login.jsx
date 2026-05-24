@@ -22,7 +22,7 @@ export default function Login() {
 
     try {
       const res = await axios.post(
-        "https://online-learning-platform-lnej.onrender.com",
+        "http://localhost:5000/auth/login",
         form,
         {
           withCredentials: true,
