@@ -45,7 +45,7 @@ export function AuthProvider({ children }) {
 
     const checkAuth = async () => {
       try {
-        const res = await fetch("http://localhost:5000/auth/check-auth", {
+        const res = await fetch("https://online-learning-platform-lnej.onrender.com/auth/check-auth", {
   credentials: "include",
 });
         const data = await res.json();
