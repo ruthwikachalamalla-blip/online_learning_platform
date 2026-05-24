@@ -29,10 +29,10 @@ export default function BrowseCourses() {
     const fetchCourses = async () => {
       try {
         const [res, wishlistRes] = await Promise.all([
-  axios.get("http://localhost:5000/student-api/courses", {
+  axios.get("https://online-learning-platform-lnej.onrender.com/student-api/courses", {
     withCredentials: true,
   }),
-  axios.get("http://localhost:5000/student-api/wishlist", {
+  axios.get("https://online-learning-platform-lnej.onrender.com/student-api/wishlist", {
     withCredentials: true,
   }),
 ]);
@@ -86,7 +86,7 @@ const wishlistData = wishlistRes.data;
 
     if (isSaved) {
       const res = await axios.delete(
-        `http://localhost:5000/student-api/wishlist/${courseId}`,
+        `https://online-learning-platform-lnej.onrender.com/student-api/wishlist/${courseId}`,
         {
           withCredentials: true,
         }
@@ -95,7 +95,7 @@ const wishlistData = wishlistRes.data;
       data = res.data;
     } else {
       const res = await axios.post(
-        "http://localhost:5000/student-api/wishlist",
+        "https://online-learning-platform-lnej.onrender.com/student-api/wishlist",
         { courseId },
         {
           withCredentials: true,

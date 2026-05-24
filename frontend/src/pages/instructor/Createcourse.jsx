@@ -169,7 +169,7 @@ export default function CreateCourse() {
       payload.append("file", file);
 
       const res = await axios.post(
-  "http://localhost:5000/instructor-api/media",
+  "https://online-learning-platform-lnej.onrender.com/instructor-api/media",
   payload,
   {
     withCredentials: true,
@@ -228,7 +228,7 @@ onUploaded(data.payload.url);
       }));
 
       const res = await axios.post(
-  "http://localhost:5000/instructor-api/course",
+  "https://online-learning-platform-lnej.onrender.com/instructor-api/course",
   {
     ...form,
     chapters: courseChapters,

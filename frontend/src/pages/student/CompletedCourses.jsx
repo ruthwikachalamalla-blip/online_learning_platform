@@ -28,7 +28,7 @@ export default function CompletedCourses() {
   useEffect(() => {
     const loadCompletedCourses = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/student-api/course", {
+        const res = await axios.get("https://online-learning-platform-lnej.onrender.com/student-api/course", {
   withCredentials: true,
 });
 

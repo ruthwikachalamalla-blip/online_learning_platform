@@ -23,10 +23,10 @@ export default function InstructorDashboard() {
     const fetchDashboard = async () => {
       try {
         const [coursesRes, doubtsRes] = await Promise.all([
-  axios.get("http://localhost:5000/instructor-api/courses", {
+  axios.get("https://online-learning-platform-lnej.onrender.com/instructor-api/courses", {
     withCredentials: true,
   }),
-  axios.get("http://localhost:5000/instructor-api/doubts", {
+  axios.get("https://online-learning-platform-lnej.onrender.com/instructor-api/doubts", {
     withCredentials: true,
   }),
 ]);
@@ -57,7 +57,7 @@ const doubtsData = doubtsRes.data;
 
     try {
       const res = await axios.patch(
-  `http://localhost:5000/instructor-api/doubts/${doubtId}/reply`,
+  `https://online-learning-platform-lnej.onrender.com/instructor-api/doubts/${doubtId}/reply`,
   { reply },
   {
     headers: { "Content-Type": "application/json" },
@@ -79,7 +79,7 @@ const data = res.data;
     setToggling(course._id);
     try {
       const res = await axios.patch(
-  "http://localhost:5000/instructor-api/courses/activate",
+  "https://online-learning-platform-lnej.onrender.com/instructor-api/courses/activate",
   { courseId: course._id, isCourseActive: true },
   {
     headers: { "Content-Type": "application/json" },
@@ -103,7 +103,7 @@ const data = res.data;
     setConfirmDelete(null);
     try {
       const res = await axios.patch(
-  "http://localhost:5000/instructor-api/courses/deactivate",
+  "https://online-learning-platform-lnej.onrender.com/instructor-api/courses/deactivate",
   { courseId: course._id, isCourseActive: false },
   {
     headers: { "Content-Type": "application/json" },

@@ -30,13 +30,13 @@ export default function CourseDetail() {
     const fetchData = async () => {
   try {
     const [coursesRes, enrollRes, wishlistRes] = await Promise.all([
-      axios.get("http://localhost:5000/student-api/courses", {
+      axios.get("https://online-learning-platform-lnej.onrender.com/student-api/courses", {
         withCredentials: true,
       }),
-      axios.get("http://localhost:5000/student-api/course", {
+      axios.get("https://online-learning-platform-lnej.onrender.com/student-api/course", {
         withCredentials: true,
       }),
-      axios.get("http://localhost:5000/student-api/wishlist", {
+      axios.get("https://online-learning-platform-lnej.onrender.com/student-api/wishlist", {
         withCredentials: true,
       }),
     ]);

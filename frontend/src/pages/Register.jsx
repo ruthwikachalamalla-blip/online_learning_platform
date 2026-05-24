@@ -28,7 +28,7 @@ export default function Register() {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/auth/register",
+        "https://online-learning-platform-lnej.onrender.com/auth/register",
         form
       );
 
